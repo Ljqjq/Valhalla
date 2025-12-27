@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/mnt/data/projects/palitex/OS/lab9/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

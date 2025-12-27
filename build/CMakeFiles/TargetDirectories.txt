@@ -1,0 +1,4 @@
+/mnt/data/projects/palitex/OS/lab9/build/CMakeFiles/ManagedServer.dir
+/mnt/data/projects/palitex/OS/lab9/build/CMakeFiles/ManagedClient.dir
+/mnt/data/projects/palitex/OS/lab9/build/CMakeFiles/edit_cache.dir
+/mnt/data/projects/palitex/OS/lab9/build/CMakeFiles/rebuild_cache.dir

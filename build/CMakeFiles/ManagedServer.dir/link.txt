@@ -1,0 +1,1 @@
+/usr/sbin/c++ -Wl,--dependency-file=CMakeFiles/ManagedServer.dir/link.d CMakeFiles/ManagedServer.dir/src/server_main.cpp.o CMakeFiles/ManagedServer.dir/src/Network/NetworkManager.cpp.o -o ManagedServer  /usr/lib/libsfml-network.so.3.0.2 /usr/lib/libsfml-system.so.3.0.2

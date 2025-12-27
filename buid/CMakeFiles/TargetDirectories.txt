@@ -1,0 +1,4 @@
+/mnt/data/projects/palitex/OS/lab9/buid/CMakeFiles/RawServer.dir
+/mnt/data/projects/palitex/OS/lab9/buid/CMakeFiles/RawClient.dir
+/mnt/data/projects/palitex/OS/lab9/buid/CMakeFiles/edit_cache.dir
+/mnt/data/projects/palitex/OS/lab9/buid/CMakeFiles/rebuild_cache.dir
