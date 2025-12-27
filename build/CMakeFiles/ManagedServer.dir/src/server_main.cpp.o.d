@@ -1,5 +1,5 @@
 CMakeFiles/ManagedServer.dir/src/server_main.cpp.o: \
- /mnt/data/projects/palitex/OS/lab9/src/server_main.cpp \
+ /mnt/data/projects/job/C++/Valhalla/src/server_main.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/15.2.1/iostream \
  /usr/include/c++/15.2.1/bits/requires_hosted.h \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -34,6 +34,15 @@ CMakeFiles/ManagedServer.dir/src/server_main.cpp.o: \
  /usr/include/c++/15.2.1/bits/move.h /usr/include/c++/15.2.1/type_traits \
  /usr/include/c++/15.2.1/bits/nested_exception.h \
  /usr/include/c++/15.2.1/bits/char_traits.h \
+ /usr/include/c++/15.2.1/compare /usr/include/c++/15.2.1/concepts \
+ /usr/include/c++/15.2.1/bits/stl_construct.h \
+ /usr/include/c++/15.2.1/bits/stl_iterator_base_types.h \
+ /usr/include/c++/15.2.1/bits/iterator_concepts.h \
+ /usr/include/c++/15.2.1/bits/ptr_traits.h \
+ /usr/include/c++/15.2.1/bits/ranges_cmp.h \
+ /usr/include/c++/15.2.1/bits/stl_iterator_base_funcs.h \
+ /usr/include/c++/15.2.1/bits/concept_check.h \
+ /usr/include/c++/15.2.1/debug/assertions.h \
  /usr/include/c++/15.2.1/bits/localefwd.h \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++locale.h \
  /usr/include/c++/15.2.1/clocale /usr/include/locale.h \
@@ -77,13 +86,8 @@ CMakeFiles/ManagedServer.dir/src/server_main.cpp.o: \
  /usr/include/c++/15.2.1/bits/cpp_type_traits.h \
  /usr/include/c++/15.2.1/bits/ostream_insert.h \
  /usr/include/c++/15.2.1/bits/cxxabi_forced.h \
- /usr/include/c++/15.2.1/bits/stl_iterator_base_funcs.h \
- /usr/include/c++/15.2.1/bits/concept_check.h \
- /usr/include/c++/15.2.1/debug/assertions.h \
- /usr/include/c++/15.2.1/bits/stl_iterator_base_types.h \
  /usr/include/c++/15.2.1/bits/stl_iterator.h \
  /usr/include/c++/15.2.1/ext/type_traits.h \
- /usr/include/c++/15.2.1/bits/ptr_traits.h \
  /usr/include/c++/15.2.1/bits/stl_function.h \
  /usr/include/c++/15.2.1/backward/binders.h \
  /usr/include/c++/15.2.1/ext/numeric_traits.h \
@@ -92,17 +96,18 @@ CMakeFiles/ManagedServer.dir/src/server_main.cpp.o: \
  /usr/include/c++/15.2.1/bits/utility.h \
  /usr/include/c++/15.2.1/debug/debug.h \
  /usr/include/c++/15.2.1/bits/predefined_ops.h \
- /usr/include/c++/15.2.1/bit /usr/include/c++/15.2.1/concepts \
- /usr/include/c++/15.2.1/bits/refwrap.h \
+ /usr/include/c++/15.2.1/bit /usr/include/c++/15.2.1/bits/refwrap.h \
  /usr/include/c++/15.2.1/bits/invoke.h \
  /usr/include/c++/15.2.1/bits/range_access.h \
  /usr/include/c++/15.2.1/initializer_list \
  /usr/include/c++/15.2.1/bits/basic_string.h \
  /usr/include/c++/15.2.1/ext/alloc_traits.h \
  /usr/include/c++/15.2.1/bits/alloc_traits.h \
- /usr/include/c++/15.2.1/bits/stl_construct.h \
  /usr/include/c++/15.2.1/string_view \
  /usr/include/c++/15.2.1/bits/functional_hash.h \
+ /usr/include/c++/15.2.1/bits/ranges_base.h \
+ /usr/include/c++/15.2.1/bits/max_size_type.h \
+ /usr/include/c++/15.2.1/numbers \
  /usr/include/c++/15.2.1/bits/string_view.tcc \
  /usr/include/c++/15.2.1/ext/string_conversions.h \
  /usr/include/c++/15.2.1/cstdlib /usr/include/stdlib.h \
@@ -128,7 +133,7 @@ CMakeFiles/ManagedServer.dir/src/server_main.cpp.o: \
  /usr/include/c++/15.2.1/cstddef \
  /usr/include/c++/15.2.1/bits/uses_allocator.h \
  /usr/include/c++/15.2.1/bits/uses_allocator_args.h \
- /usr/include/c++/15.2.1/tuple \
+ /usr/include/c++/15.2.1/tuple /usr/include/c++/15.2.1/bits/ranges_util.h \
  /usr/include/c++/15.2.1/bits/locale_classes.tcc \
  /usr/include/c++/15.2.1/system_error \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/error_constants.h \
@@ -150,103 +155,104 @@ CMakeFiles/ManagedServer.dir/src/server_main.cpp.o: \
  /usr/include/c++/15.2.1/bits/node_handle.h \
  /usr/include/c++/15.2.1/bits/stl_map.h \
  /usr/include/c++/15.2.1/bits/stl_multimap.h \
- /usr/include/c++/15.2.1/bits/erase_if.h /usr/include/c++/15.2.1/vector \
- /usr/include/c++/15.2.1/bits/stl_uninitialized.h \
- /usr/include/c++/15.2.1/bits/stl_vector.h \
- /usr/include/c++/15.2.1/bits/stl_bvector.h \
- /usr/include/c++/15.2.1/bits/vector.tcc /usr/include/c++/15.2.1/chrono \
- /usr/include/c++/15.2.1/bits/chrono.h /usr/include/c++/15.2.1/ratio \
- /usr/include/c++/15.2.1/cstdint \
+ /usr/include/c++/15.2.1/bits/erase_if.h /usr/include/c++/15.2.1/cstring \
+ /usr/include/string.h /usr/include/strings.h \
+ /usr/include/c++/15.2.1/optional \
+ /usr/include/c++/15.2.1/bits/enable_special_members.h \
+ /usr/include/SFML/System.hpp /usr/include/SFML/Config.hpp \
+ /usr/include/SFML/System/Angle.hpp /usr/include/SFML/System/Angle.inl \
+ /usr/include/c++/15.2.1/cassert /usr/include/assert.h \
+ /usr/include/SFML/System/Clock.hpp /usr/include/SFML/System/Export.hpp \
+ /usr/include/c++/15.2.1/chrono /usr/include/c++/15.2.1/bits/chrono.h \
+ /usr/include/c++/15.2.1/ratio /usr/include/c++/15.2.1/cstdint \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/stdint-uintn.h \
  /usr/include/bits/stdint-least.h /usr/include/c++/15.2.1/limits \
  /usr/include/c++/15.2.1/ctime \
  /usr/include/c++/15.2.1/bits/parse_numbers.h \
- /usr/include/c++/15.2.1/thread /usr/include/c++/15.2.1/bits/std_thread.h \
- /usr/include/c++/15.2.1/bits/unique_ptr.h \
- /usr/include/c++/15.2.1/bits/this_thread_sleep.h \
- /usr/include/c++/15.2.1/cmath /usr/include/math.h \
- /usr/include/bits/math-vector.h /usr/include/bits/libm-simd-decl-stubs.h \
- /usr/include/bits/flt-eval-method.h /usr/include/bits/fp-logb.h \
- /usr/include/bits/fp-fast.h /usr/include/bits/mathcalls-macros.h \
- /usr/include/bits/mathcalls-helper-functions.h \
- /usr/include/bits/mathcalls.h /usr/include/bits/mathcalls-narrow.h \
- /usr/include/bits/iscanonical.h /usr/include/c++/15.2.1/bits/specfun.h \
- /usr/include/c++/15.2.1/tr1/gamma.tcc \
- /usr/include/c++/15.2.1/tr1/special_function_util.h \
- /usr/include/c++/15.2.1/tr1/bessel_function.tcc \
- /usr/include/c++/15.2.1/tr1/beta_function.tcc \
- /usr/include/c++/15.2.1/tr1/ell_integral.tcc \
- /usr/include/c++/15.2.1/tr1/exp_integral.tcc \
- /usr/include/c++/15.2.1/tr1/hypergeometric.tcc \
- /usr/include/c++/15.2.1/tr1/legendre_function.tcc \
- /usr/include/c++/15.2.1/tr1/modified_bessel_func.tcc \
- /usr/include/c++/15.2.1/tr1/poly_hermite.tcc \
- /usr/include/c++/15.2.1/tr1/poly_laguerre.tcc \
- /usr/include/c++/15.2.1/tr1/riemann_zeta.tcc \
- /usr/include/c++/15.2.1/cstring /usr/include/string.h \
- /usr/include/strings.h /usr/include/c++/15.2.1/algorithm \
+ /usr/include/c++/15.2.1/sstream /usr/include/c++/15.2.1/bits/sstream.tcc \
+ /usr/include/c++/15.2.1/vector \
+ /usr/include/c++/15.2.1/bits/stl_uninitialized.h \
+ /usr/include/c++/15.2.1/bits/stl_vector.h \
+ /usr/include/c++/15.2.1/bits/stl_bvector.h \
+ /usr/include/c++/15.2.1/bits/vector.tcc \
  /usr/include/c++/15.2.1/bits/stl_algo.h \
  /usr/include/c++/15.2.1/bits/algorithmfwd.h \
  /usr/include/c++/15.2.1/bits/stl_heap.h \
  /usr/include/c++/15.2.1/bits/uniform_int_dist.h \
  /usr/include/c++/15.2.1/bits/stl_tempbuf.h \
- /usr/include/c++/15.2.1/pstl/glue_algorithm_defs.h \
- /usr/include/c++/15.2.1/pstl/execution_defs.h \
- /mnt/data/projects/palitex/OS/lab9/include/NetworkManager.hpp \
- /usr/include/SFML/Network.hpp /usr/include/SFML/Network/Ftp.hpp \
- /usr/include/SFML/Network/Export.hpp /usr/include/SFML/Config.hpp \
- /usr/include/SFML/Network/TcpSocket.hpp \
- /usr/include/SFML/Network/Socket.hpp \
- /usr/include/SFML/Network/SocketHandle.hpp \
- /usr/include/SFML/System/Time.hpp /usr/include/SFML/System/Time.inl \
- /usr/include/c++/15.2.1/cassert /usr/include/assert.h \
- /usr/include/c++/15.2.1/optional \
- /usr/include/c++/15.2.1/bits/enable_special_members.h \
- /usr/include/c++/15.2.1/filesystem /usr/include/c++/15.2.1/bits/fs_fwd.h \
- /usr/include/c++/15.2.1/bits/fs_path.h /usr/include/c++/15.2.1/locale \
+ /usr/include/c++/15.2.1/bits/shared_ptr.h \
+ /usr/include/c++/15.2.1/bits/shared_ptr_base.h \
+ /usr/include/c++/15.2.1/bits/allocated_ptr.h \
+ /usr/include/c++/15.2.1/bits/unique_ptr.h \
+ /usr/include/c++/15.2.1/ext/concurrence.h \
+ /usr/include/c++/15.2.1/bits/align.h \
+ /usr/include/c++/15.2.1/bits/chrono_io.h /usr/include/c++/15.2.1/iomanip \
+ /usr/include/c++/15.2.1/locale \
  /usr/include/c++/15.2.1/bits/locale_facets_nonio.h \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/time_members.h \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/messages_members.h \
  /usr/include/libintl.h /usr/include/c++/15.2.1/bits/codecvt.h \
  /usr/include/c++/15.2.1/bits/locale_facets_nonio.tcc \
  /usr/include/c++/15.2.1/bits/locale_conv.h \
- /usr/include/c++/15.2.1/iomanip \
  /usr/include/c++/15.2.1/bits/quoted_string.h \
- /usr/include/c++/15.2.1/sstream /usr/include/c++/15.2.1/bits/sstream.tcc \
- /usr/include/c++/15.2.1/codecvt \
- /usr/include/c++/15.2.1/ext/concurrence.h \
- /usr/include/c++/15.2.1/bits/shared_ptr.h \
- /usr/include/c++/15.2.1/bits/shared_ptr_base.h \
- /usr/include/c++/15.2.1/bits/allocated_ptr.h \
- /usr/include/c++/15.2.1/bits/fs_dir.h \
- /usr/include/c++/15.2.1/bits/fs_ops.h /usr/include/SFML/Network/Http.hpp \
- /usr/include/SFML/Network/IpAddress.hpp \
- /usr/include/SFML/Network/Packet.hpp \
- /usr/include/SFML/Network/SocketSelector.hpp \
- /usr/include/c++/15.2.1/memory \
- /usr/include/c++/15.2.1/bits/stl_raw_storage_iter.h \
- /usr/include/c++/15.2.1/bits/align.h \
- /usr/include/c++/15.2.1/bits/shared_ptr_atomic.h \
- /usr/include/c++/15.2.1/bits/atomic_base.h \
- /usr/include/c++/15.2.1/bits/atomic_lockfree_defines.h \
- /usr/include/c++/15.2.1/backward/auto_ptr.h \
- /usr/include/c++/15.2.1/pstl/glue_memory_defs.h \
- /usr/include/SFML/Network/TcpListener.hpp \
- /usr/include/SFML/Network/UdpSocket.hpp /usr/include/SFML/System.hpp \
- /usr/include/SFML/System/Angle.hpp /usr/include/SFML/System/Angle.inl \
- /usr/include/SFML/System/Clock.hpp /usr/include/SFML/System/Export.hpp \
+ /usr/include/c++/15.2.1/format /usr/include/c++/15.2.1/array \
+ /usr/include/c++/15.2.1/charconv /usr/include/c++/15.2.1/span \
+ /usr/include/c++/15.2.1/bits/monostate.h \
+ /usr/include/c++/15.2.1/bits/formatfwd.h \
+ /usr/include/c++/15.2.1/bits/ranges_algobase.h \
+ /usr/include/c++/15.2.1/bits/unicode.h \
+ /usr/include/c++/15.2.1/bits/unicode-data.h \
  /usr/include/SFML/System/Err.hpp /usr/include/SFML/System/Exception.hpp \
  /usr/include/SFML/System/FileInputStream.hpp \
  /usr/include/SFML/System/InputStream.hpp \
+ /usr/include/c++/15.2.1/filesystem /usr/include/c++/15.2.1/bits/fs_fwd.h \
+ /usr/include/c++/15.2.1/bits/fs_path.h /usr/include/c++/15.2.1/codecvt \
+ /usr/include/c++/15.2.1/bits/fs_dir.h \
+ /usr/include/c++/15.2.1/bits/fs_ops.h /usr/include/c++/15.2.1/memory \
+ /usr/include/c++/15.2.1/bits/stl_raw_storage_iter.h \
+ /usr/include/c++/15.2.1/bits/shared_ptr_atomic.h \
+ /usr/include/c++/15.2.1/bits/atomic_base.h \
+ /usr/include/c++/15.2.1/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/15.2.1/bits/atomic_wait.h \
+ /usr/include/c++/15.2.1/climits \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/limits.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h /usr/include/bits/xopen_lim.h \
+ /usr/include/bits/uio_lim.h /usr/include/unistd.h \
+ /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
+ /usr/include/bits/confname.h /usr/include/bits/getopt_posix.h \
+ /usr/include/bits/getopt_core.h /usr/include/bits/unistd_ext.h \
+ /usr/include/linux/close_range.h /usr/include/syscall.h \
+ /usr/include/sys/syscall.h /usr/include/asm/unistd.h \
+ /usr/include/asm/unistd_64.h /usr/include/bits/syscall.h \
+ /usr/include/c++/15.2.1/bits/std_mutex.h \
+ /usr/include/c++/15.2.1/backward/auto_ptr.h \
+ /usr/include/c++/15.2.1/bits/ranges_uninitialized.h \
+ /usr/include/c++/15.2.1/pstl/glue_memory_defs.h \
+ /usr/include/c++/15.2.1/pstl/execution_defs.h \
  /usr/include/SFML/System/MemoryInputStream.hpp \
  /usr/include/SFML/System/Sleep.hpp /usr/include/SFML/System/String.hpp \
- /usr/include/SFML/System/Utf.hpp /usr/include/c++/15.2.1/array \
- /usr/include/c++/15.2.1/compare /usr/include/SFML/System/Utf.inl \
+ /usr/include/SFML/System/Utf.hpp /usr/include/SFML/System/Utf.inl \
  /usr/include/SFML/System/String.inl /usr/include/c++/15.2.1/iterator \
  /usr/include/c++/15.2.1/bits/stream_iterator.h \
+ /usr/include/SFML/System/Time.hpp /usr/include/SFML/System/Time.inl \
  /usr/include/SFML/System/Vector2.hpp \
  /usr/include/SFML/System/Vector2.inl \
  /usr/include/SFML/System/Vector3.hpp \
  /usr/include/SFML/System/Vector3.inl \
- /mnt/data/projects/palitex/OS/lab9/src/shared/Protocol.hpp
+ /mnt/data/projects/job/C++/Valhalla/src/../include/NetworkManager.hpp \
+ /usr/include/SFML/Network.hpp /usr/include/SFML/Network/Ftp.hpp \
+ /usr/include/SFML/Network/Export.hpp \
+ /usr/include/SFML/Network/TcpSocket.hpp \
+ /usr/include/SFML/Network/Socket.hpp \
+ /usr/include/SFML/Network/SocketHandle.hpp \
+ /usr/include/SFML/Network/Http.hpp \
+ /usr/include/SFML/Network/IpAddress.hpp \
+ /usr/include/SFML/Network/Packet.hpp \
+ /usr/include/SFML/Network/SocketSelector.hpp \
+ /usr/include/SFML/Network/TcpListener.hpp \
+ /usr/include/SFML/Network/UdpSocket.hpp \
+ /mnt/data/projects/job/C++/Valhalla/src/../shared/Protocol.hpp

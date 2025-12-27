@@ -53,10 +53,10 @@ RM = /usr/sbin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/data/projects/palitex/OS/lab9
+CMAKE_SOURCE_DIR = /mnt/data/projects/job/C++/Valhalla
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/data/projects/palitex/OS/lab9/build
+CMAKE_BINARY_DIR = /mnt/data/projects/job/C++/Valhalla/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ManagedClient.dir/depend.make
@@ -73,67 +73,51 @@ CMakeFiles/ManagedClient.dir/codegen:
 .PHONY : CMakeFiles/ManagedClient.dir/codegen
 
 CMakeFiles/ManagedClient.dir/src/client_main.cpp.o: CMakeFiles/ManagedClient.dir/flags.make
-CMakeFiles/ManagedClient.dir/src/client_main.cpp.o: /mnt/data/projects/palitex/OS/lab9/src/client_main.cpp
+CMakeFiles/ManagedClient.dir/src/client_main.cpp.o: /mnt/data/projects/job/C++/Valhalla/src/client_main.cpp
 CMakeFiles/ManagedClient.dir/src/client_main.cpp.o: CMakeFiles/ManagedClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/data/projects/palitex/OS/lab9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ManagedClient.dir/src/client_main.cpp.o"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ManagedClient.dir/src/client_main.cpp.o -MF CMakeFiles/ManagedClient.dir/src/client_main.cpp.o.d -o CMakeFiles/ManagedClient.dir/src/client_main.cpp.o -c /mnt/data/projects/palitex/OS/lab9/src/client_main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/data/projects/job/C++/Valhalla/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ManagedClient.dir/src/client_main.cpp.o"
+	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ManagedClient.dir/src/client_main.cpp.o -MF CMakeFiles/ManagedClient.dir/src/client_main.cpp.o.d -o CMakeFiles/ManagedClient.dir/src/client_main.cpp.o -c /mnt/data/projects/job/C++/Valhalla/src/client_main.cpp
 
 CMakeFiles/ManagedClient.dir/src/client_main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ManagedClient.dir/src/client_main.cpp.i"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/data/projects/palitex/OS/lab9/src/client_main.cpp > CMakeFiles/ManagedClient.dir/src/client_main.cpp.i
+	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/data/projects/job/C++/Valhalla/src/client_main.cpp > CMakeFiles/ManagedClient.dir/src/client_main.cpp.i
 
 CMakeFiles/ManagedClient.dir/src/client_main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ManagedClient.dir/src/client_main.cpp.s"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/data/projects/palitex/OS/lab9/src/client_main.cpp -o CMakeFiles/ManagedClient.dir/src/client_main.cpp.s
+	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/data/projects/job/C++/Valhalla/src/client_main.cpp -o CMakeFiles/ManagedClient.dir/src/client_main.cpp.s
 
 CMakeFiles/ManagedClient.dir/src/Network/NetworkManager.cpp.o: CMakeFiles/ManagedClient.dir/flags.make
-CMakeFiles/ManagedClient.dir/src/Network/NetworkManager.cpp.o: /mnt/data/projects/palitex/OS/lab9/src/Network/NetworkManager.cpp
+CMakeFiles/ManagedClient.dir/src/Network/NetworkManager.cpp.o: /mnt/data/projects/job/C++/Valhalla/src/Network/NetworkManager.cpp
 CMakeFiles/ManagedClient.dir/src/Network/NetworkManager.cpp.o: CMakeFiles/ManagedClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/data/projects/palitex/OS/lab9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ManagedClient.dir/src/Network/NetworkManager.cpp.o"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ManagedClient.dir/src/Network/NetworkManager.cpp.o -MF CMakeFiles/ManagedClient.dir/src/Network/NetworkManager.cpp.o.d -o CMakeFiles/ManagedClient.dir/src/Network/NetworkManager.cpp.o -c /mnt/data/projects/palitex/OS/lab9/src/Network/NetworkManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/data/projects/job/C++/Valhalla/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ManagedClient.dir/src/Network/NetworkManager.cpp.o"
+	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ManagedClient.dir/src/Network/NetworkManager.cpp.o -MF CMakeFiles/ManagedClient.dir/src/Network/NetworkManager.cpp.o.d -o CMakeFiles/ManagedClient.dir/src/Network/NetworkManager.cpp.o -c /mnt/data/projects/job/C++/Valhalla/src/Network/NetworkManager.cpp
 
 CMakeFiles/ManagedClient.dir/src/Network/NetworkManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ManagedClient.dir/src/Network/NetworkManager.cpp.i"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/data/projects/palitex/OS/lab9/src/Network/NetworkManager.cpp > CMakeFiles/ManagedClient.dir/src/Network/NetworkManager.cpp.i
+	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/data/projects/job/C++/Valhalla/src/Network/NetworkManager.cpp > CMakeFiles/ManagedClient.dir/src/Network/NetworkManager.cpp.i
 
 CMakeFiles/ManagedClient.dir/src/Network/NetworkManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ManagedClient.dir/src/Network/NetworkManager.cpp.s"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/data/projects/palitex/OS/lab9/src/Network/NetworkManager.cpp -o CMakeFiles/ManagedClient.dir/src/Network/NetworkManager.cpp.s
-
-CMakeFiles/ManagedClient.dir/src/Render/GameRenderer.cpp.o: CMakeFiles/ManagedClient.dir/flags.make
-CMakeFiles/ManagedClient.dir/src/Render/GameRenderer.cpp.o: /mnt/data/projects/palitex/OS/lab9/src/Render/GameRenderer.cpp
-CMakeFiles/ManagedClient.dir/src/Render/GameRenderer.cpp.o: CMakeFiles/ManagedClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/data/projects/palitex/OS/lab9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ManagedClient.dir/src/Render/GameRenderer.cpp.o"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ManagedClient.dir/src/Render/GameRenderer.cpp.o -MF CMakeFiles/ManagedClient.dir/src/Render/GameRenderer.cpp.o.d -o CMakeFiles/ManagedClient.dir/src/Render/GameRenderer.cpp.o -c /mnt/data/projects/palitex/OS/lab9/src/Render/GameRenderer.cpp
-
-CMakeFiles/ManagedClient.dir/src/Render/GameRenderer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ManagedClient.dir/src/Render/GameRenderer.cpp.i"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/data/projects/palitex/OS/lab9/src/Render/GameRenderer.cpp > CMakeFiles/ManagedClient.dir/src/Render/GameRenderer.cpp.i
-
-CMakeFiles/ManagedClient.dir/src/Render/GameRenderer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ManagedClient.dir/src/Render/GameRenderer.cpp.s"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/data/projects/palitex/OS/lab9/src/Render/GameRenderer.cpp -o CMakeFiles/ManagedClient.dir/src/Render/GameRenderer.cpp.s
+	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/data/projects/job/C++/Valhalla/src/Network/NetworkManager.cpp -o CMakeFiles/ManagedClient.dir/src/Network/NetworkManager.cpp.s
 
 # Object files for target ManagedClient
 ManagedClient_OBJECTS = \
 "CMakeFiles/ManagedClient.dir/src/client_main.cpp.o" \
-"CMakeFiles/ManagedClient.dir/src/Network/NetworkManager.cpp.o" \
-"CMakeFiles/ManagedClient.dir/src/Render/GameRenderer.cpp.o"
+"CMakeFiles/ManagedClient.dir/src/Network/NetworkManager.cpp.o"
 
 # External object files for target ManagedClient
 ManagedClient_EXTERNAL_OBJECTS =
 
 ManagedClient: CMakeFiles/ManagedClient.dir/src/client_main.cpp.o
 ManagedClient: CMakeFiles/ManagedClient.dir/src/Network/NetworkManager.cpp.o
-ManagedClient: CMakeFiles/ManagedClient.dir/src/Render/GameRenderer.cpp.o
 ManagedClient: CMakeFiles/ManagedClient.dir/build.make
 ManagedClient: CMakeFiles/ManagedClient.dir/compiler_depend.ts
-ManagedClient: /usr/lib/libsfml-network.so.3.0.2
 ManagedClient: /usr/lib/libsfml-graphics.so.3.0.2
+ManagedClient: /usr/lib/libsfml-network.so.3.0.2
 ManagedClient: /usr/lib/libsfml-window.so.3.0.2
 ManagedClient: /usr/lib/libsfml-system.so.3.0.2
 ManagedClient: CMakeFiles/ManagedClient.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/data/projects/palitex/OS/lab9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ManagedClient"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/data/projects/job/C++/Valhalla/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ManagedClient"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ManagedClient.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -145,6 +129,6 @@ CMakeFiles/ManagedClient.dir/clean:
 .PHONY : CMakeFiles/ManagedClient.dir/clean
 
 CMakeFiles/ManagedClient.dir/depend:
-	cd /mnt/data/projects/palitex/OS/lab9/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/data/projects/palitex/OS/lab9 /mnt/data/projects/palitex/OS/lab9 /mnt/data/projects/palitex/OS/lab9/build /mnt/data/projects/palitex/OS/lab9/build /mnt/data/projects/palitex/OS/lab9/build/CMakeFiles/ManagedClient.dir/DependInfo.cmake "--color=$(COLOR)" ManagedClient
+	cd /mnt/data/projects/job/C++/Valhalla/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/data/projects/job/C++/Valhalla /mnt/data/projects/job/C++/Valhalla /mnt/data/projects/job/C++/Valhalla/build /mnt/data/projects/job/C++/Valhalla/build /mnt/data/projects/job/C++/Valhalla/build/CMakeFiles/ManagedClient.dir/DependInfo.cmake "--color=$(COLOR)" ManagedClient
 .PHONY : CMakeFiles/ManagedClient.dir/depend
 

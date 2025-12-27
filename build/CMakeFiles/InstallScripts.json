@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"/mnt/data/projects/palitex/OS/lab9/build/cmake_install.cmake"
+		"/mnt/data/projects/job/C++/Valhalla/build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

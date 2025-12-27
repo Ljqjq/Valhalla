@@ -4,9 +4,8 @@ ManagedClient: \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o \
   CMakeFiles/ManagedClient.dir/src/client_main.cpp.o \
   CMakeFiles/ManagedClient.dir/src/Network/NetworkManager.cpp.o \
-  CMakeFiles/ManagedClient.dir/src/Render/GameRenderer.cpp.o \
-  /usr/lib/libsfml-network.so.3.0.2 \
   /usr/lib/libsfml-graphics.so.3.0.2 \
+  /usr/lib/libsfml-network.so.3.0.2 \
   /usr/lib/libsfml-window.so.3.0.2 \
   /usr/lib/libsfml-system.so.3.0.2 \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libstdc++.so \
@@ -50,7 +49,6 @@ ManagedClient: \
   /usr/lib/libXext.so.6 \
   /usr/lib/libXrender.so.1 \
   /usr/lib/libXfixes.so.3 \
-  /usr/lib/libcap.so.2 \
   /usr/lib/libbrotlicommon.so.1 \
   /usr/lib/libXau.so.6 \
   /usr/lib/libXdmcp.so.6
@@ -65,11 +63,9 @@ CMakeFiles/ManagedClient.dir/src/client_main.cpp.o:
 
 CMakeFiles/ManagedClient.dir/src/Network/NetworkManager.cpp.o:
 
-CMakeFiles/ManagedClient.dir/src/Render/GameRenderer.cpp.o:
+/usr/lib/libsfml-graphics.so.3.0.2:
 
 /usr/lib/libsfml-network.so.3.0.2:
-
-/usr/lib/libsfml-graphics.so.3.0.2:
 
 /usr/lib/libsfml-window.so.3.0.2:
 
@@ -156,8 +152,6 @@ CMakeFiles/ManagedClient.dir/src/Render/GameRenderer.cpp.o:
 /usr/lib/libXrender.so.1:
 
 /usr/lib/libXfixes.so.3:
-
-/usr/lib/libcap.so.2:
 
 /usr/lib/libbrotlicommon.so.1:
 

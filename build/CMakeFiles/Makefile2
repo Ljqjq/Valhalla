@@ -54,10 +54,10 @@ RM = /usr/sbin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/data/projects/palitex/OS/lab9
+CMAKE_SOURCE_DIR = /mnt/data/projects/job/C++/Valhalla
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/data/projects/palitex/OS/lab9/build
+CMAKE_BINARY_DIR = /mnt/data/projects/job/C++/Valhalla/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -88,14 +88,14 @@ clean: CMakeFiles/ManagedClient.dir/clean
 CMakeFiles/ManagedServer.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ManagedServer.dir/build.make CMakeFiles/ManagedServer.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ManagedServer.dir/build.make CMakeFiles/ManagedServer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/data/projects/palitex/OS/lab9/build/CMakeFiles --progress-num=5,6,7 "Built target ManagedServer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/data/projects/job/C++/Valhalla/build/CMakeFiles --progress-num=4,5,6 "Built target ManagedServer"
 .PHONY : CMakeFiles/ManagedServer.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ManagedServer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/data/projects/palitex/OS/lab9/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/data/projects/job/C++/Valhalla/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ManagedServer.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/data/projects/palitex/OS/lab9/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/data/projects/job/C++/Valhalla/build/CMakeFiles 0
 .PHONY : CMakeFiles/ManagedServer.dir/rule
 
 # Convenience name for target.
@@ -105,7 +105,7 @@ ManagedServer: CMakeFiles/ManagedServer.dir/rule
 # codegen rule for target.
 CMakeFiles/ManagedServer.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ManagedServer.dir/build.make CMakeFiles/ManagedServer.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/data/projects/palitex/OS/lab9/build/CMakeFiles --progress-num=5,6,7 "Finished codegen for target ManagedServer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/data/projects/job/C++/Valhalla/build/CMakeFiles --progress-num=4,5,6 "Finished codegen for target ManagedServer"
 .PHONY : CMakeFiles/ManagedServer.dir/codegen
 
 # clean rule for target.
@@ -120,14 +120,14 @@ CMakeFiles/ManagedServer.dir/clean:
 CMakeFiles/ManagedClient.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ManagedClient.dir/build.make CMakeFiles/ManagedClient.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ManagedClient.dir/build.make CMakeFiles/ManagedClient.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/data/projects/palitex/OS/lab9/build/CMakeFiles --progress-num=1,2,3,4 "Built target ManagedClient"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/data/projects/job/C++/Valhalla/build/CMakeFiles --progress-num=1,2,3 "Built target ManagedClient"
 .PHONY : CMakeFiles/ManagedClient.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ManagedClient.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/data/projects/palitex/OS/lab9/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/data/projects/job/C++/Valhalla/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ManagedClient.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/data/projects/palitex/OS/lab9/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/data/projects/job/C++/Valhalla/build/CMakeFiles 0
 .PHONY : CMakeFiles/ManagedClient.dir/rule
 
 # Convenience name for target.
@@ -137,7 +137,7 @@ ManagedClient: CMakeFiles/ManagedClient.dir/rule
 # codegen rule for target.
 CMakeFiles/ManagedClient.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ManagedClient.dir/build.make CMakeFiles/ManagedClient.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/data/projects/palitex/OS/lab9/build/CMakeFiles --progress-num=1,2,3,4 "Finished codegen for target ManagedClient"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/data/projects/job/C++/Valhalla/build/CMakeFiles --progress-num=1,2,3 "Finished codegen for target ManagedClient"
 .PHONY : CMakeFiles/ManagedClient.dir/codegen
 
 # clean rule for target.

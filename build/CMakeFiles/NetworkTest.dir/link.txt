@@ -1,1 +1,0 @@
-/usr/sbin/c++ -Wl,--dependency-file=CMakeFiles/NetworkTest.dir/link.d CMakeFiles/NetworkTest.dir/src/Network/NetworkManager.cpp.o -o NetworkTest  /usr/lib/libsfml-network.so.3.0.2 /usr/lib/libsfml-system.so.3.0.2

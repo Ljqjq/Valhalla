@@ -53,10 +53,10 @@ RM = /usr/sbin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/data/projects/palitex/OS/lab9
+CMAKE_SOURCE_DIR = /mnt/data/projects/job/C++/Valhalla
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/data/projects/palitex/OS/lab9/build
+CMAKE_BINARY_DIR = /mnt/data/projects/job/C++/Valhalla/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ManagedServer.dir/depend.make
@@ -73,32 +73,32 @@ CMakeFiles/ManagedServer.dir/codegen:
 .PHONY : CMakeFiles/ManagedServer.dir/codegen
 
 CMakeFiles/ManagedServer.dir/src/server_main.cpp.o: CMakeFiles/ManagedServer.dir/flags.make
-CMakeFiles/ManagedServer.dir/src/server_main.cpp.o: /mnt/data/projects/palitex/OS/lab9/src/server_main.cpp
+CMakeFiles/ManagedServer.dir/src/server_main.cpp.o: /mnt/data/projects/job/C++/Valhalla/src/server_main.cpp
 CMakeFiles/ManagedServer.dir/src/server_main.cpp.o: CMakeFiles/ManagedServer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/data/projects/palitex/OS/lab9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ManagedServer.dir/src/server_main.cpp.o"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ManagedServer.dir/src/server_main.cpp.o -MF CMakeFiles/ManagedServer.dir/src/server_main.cpp.o.d -o CMakeFiles/ManagedServer.dir/src/server_main.cpp.o -c /mnt/data/projects/palitex/OS/lab9/src/server_main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/data/projects/job/C++/Valhalla/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ManagedServer.dir/src/server_main.cpp.o"
+	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ManagedServer.dir/src/server_main.cpp.o -MF CMakeFiles/ManagedServer.dir/src/server_main.cpp.o.d -o CMakeFiles/ManagedServer.dir/src/server_main.cpp.o -c /mnt/data/projects/job/C++/Valhalla/src/server_main.cpp
 
 CMakeFiles/ManagedServer.dir/src/server_main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ManagedServer.dir/src/server_main.cpp.i"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/data/projects/palitex/OS/lab9/src/server_main.cpp > CMakeFiles/ManagedServer.dir/src/server_main.cpp.i
+	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/data/projects/job/C++/Valhalla/src/server_main.cpp > CMakeFiles/ManagedServer.dir/src/server_main.cpp.i
 
 CMakeFiles/ManagedServer.dir/src/server_main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ManagedServer.dir/src/server_main.cpp.s"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/data/projects/palitex/OS/lab9/src/server_main.cpp -o CMakeFiles/ManagedServer.dir/src/server_main.cpp.s
+	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/data/projects/job/C++/Valhalla/src/server_main.cpp -o CMakeFiles/ManagedServer.dir/src/server_main.cpp.s
 
 CMakeFiles/ManagedServer.dir/src/Network/NetworkManager.cpp.o: CMakeFiles/ManagedServer.dir/flags.make
-CMakeFiles/ManagedServer.dir/src/Network/NetworkManager.cpp.o: /mnt/data/projects/palitex/OS/lab9/src/Network/NetworkManager.cpp
+CMakeFiles/ManagedServer.dir/src/Network/NetworkManager.cpp.o: /mnt/data/projects/job/C++/Valhalla/src/Network/NetworkManager.cpp
 CMakeFiles/ManagedServer.dir/src/Network/NetworkManager.cpp.o: CMakeFiles/ManagedServer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/data/projects/palitex/OS/lab9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ManagedServer.dir/src/Network/NetworkManager.cpp.o"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ManagedServer.dir/src/Network/NetworkManager.cpp.o -MF CMakeFiles/ManagedServer.dir/src/Network/NetworkManager.cpp.o.d -o CMakeFiles/ManagedServer.dir/src/Network/NetworkManager.cpp.o -c /mnt/data/projects/palitex/OS/lab9/src/Network/NetworkManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/data/projects/job/C++/Valhalla/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ManagedServer.dir/src/Network/NetworkManager.cpp.o"
+	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ManagedServer.dir/src/Network/NetworkManager.cpp.o -MF CMakeFiles/ManagedServer.dir/src/Network/NetworkManager.cpp.o.d -o CMakeFiles/ManagedServer.dir/src/Network/NetworkManager.cpp.o -c /mnt/data/projects/job/C++/Valhalla/src/Network/NetworkManager.cpp
 
 CMakeFiles/ManagedServer.dir/src/Network/NetworkManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ManagedServer.dir/src/Network/NetworkManager.cpp.i"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/data/projects/palitex/OS/lab9/src/Network/NetworkManager.cpp > CMakeFiles/ManagedServer.dir/src/Network/NetworkManager.cpp.i
+	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/data/projects/job/C++/Valhalla/src/Network/NetworkManager.cpp > CMakeFiles/ManagedServer.dir/src/Network/NetworkManager.cpp.i
 
 CMakeFiles/ManagedServer.dir/src/Network/NetworkManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ManagedServer.dir/src/Network/NetworkManager.cpp.s"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/data/projects/palitex/OS/lab9/src/Network/NetworkManager.cpp -o CMakeFiles/ManagedServer.dir/src/Network/NetworkManager.cpp.s
+	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/data/projects/job/C++/Valhalla/src/Network/NetworkManager.cpp -o CMakeFiles/ManagedServer.dir/src/Network/NetworkManager.cpp.s
 
 # Object files for target ManagedServer
 ManagedServer_OBJECTS = \
@@ -115,7 +115,7 @@ ManagedServer: CMakeFiles/ManagedServer.dir/compiler_depend.ts
 ManagedServer: /usr/lib/libsfml-network.so.3.0.2
 ManagedServer: /usr/lib/libsfml-system.so.3.0.2
 ManagedServer: CMakeFiles/ManagedServer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/data/projects/palitex/OS/lab9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ManagedServer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/data/projects/job/C++/Valhalla/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ManagedServer"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ManagedServer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -127,6 +127,6 @@ CMakeFiles/ManagedServer.dir/clean:
 .PHONY : CMakeFiles/ManagedServer.dir/clean
 
 CMakeFiles/ManagedServer.dir/depend:
-	cd /mnt/data/projects/palitex/OS/lab9/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/data/projects/palitex/OS/lab9 /mnt/data/projects/palitex/OS/lab9 /mnt/data/projects/palitex/OS/lab9/build /mnt/data/projects/palitex/OS/lab9/build /mnt/data/projects/palitex/OS/lab9/build/CMakeFiles/ManagedServer.dir/DependInfo.cmake "--color=$(COLOR)" ManagedServer
+	cd /mnt/data/projects/job/C++/Valhalla/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/data/projects/job/C++/Valhalla /mnt/data/projects/job/C++/Valhalla /mnt/data/projects/job/C++/Valhalla/build /mnt/data/projects/job/C++/Valhalla/build /mnt/data/projects/job/C++/Valhalla/build/CMakeFiles/ManagedServer.dir/DependInfo.cmake "--color=$(COLOR)" ManagedServer
 .PHONY : CMakeFiles/ManagedServer.dir/depend
 

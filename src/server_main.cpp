@@ -1,58 +1,80 @@
-// src/server_main.cpp - Final UDP Receiver (SFML 3.0.2 Compatible)
-#include <SFML/Network.hpp>
 #include <iostream>
-#include <array>
-#include <string>
-#include <optional> // REQUIRED for std::optional<sf::IpAddress>
+#include <map>
+#include <cstring>
+#include <optional>
+#include <SFML/System.hpp>
+#include "../include/NetworkManager.hpp"
+#include "../shared/Protocol.hpp"
 
-constexpr unsigned short SERVER_PORT = 45678;
-constexpr std::size_t MAX_BUFFER_SIZE = 100;
+struct ServerPlayerData {
+    float x = 400.0f;
+    float y = 300.0f;
+    int32_t hp = 100;
+    sf::IpAddress ip = sf::IpAddress::LocalHost;
+};
 
 int main() {
-    sf::UdpSocket socket;
-    
-    if (socket.bind(SERVER_PORT) != sf::Socket::Status::Done) {
-        std::cerr << "SERVER: Error binding socket to port " << SERVER_PORT << ". Exiting." << std::endl;
-        return 1;
+    NetworkManager net;
+    if (!net.bind(5000)) {
+        std::cerr << "[ERROR] Cannot bind to port 5000" << std::endl;
+        return -1;
     }
-    socket.setBlocking(false); 
-    std::cout << "SERVER: SFML 3.0.2 Listening on port " << SERVER_PORT << "..." << std::endl;
 
-    // Declarations required by the SFML 3.0.2 receive function:
-    std::array<char, MAX_BUFFER_SIZE> data; 
-    std::size_t received = 0;
-    std::optional<sf::IpAddress> sender; // NOTE: std::optional is REQUIRED here
-    unsigned short port = 0;             // Initialize port
+    std::map<unsigned short, ServerPlayerData> playerMap;
+    NetworkDataBuffer recvBuf;
+    std::size_t size;
+    std::optional<sf::IpAddress> senderIp;
+    unsigned short senderPort;
+
+    std::cout << "--- SERVER PROTOCOL CHECK ---" << std::endl;
+    std::cout << "MAX_PLAYERS: " << MAX_PLAYERS << std::endl;
+    std::cout << "GameState size: " << sizeof(GameState) << std::endl;
+    std::cout << "-----------------------------" << std::endl;
+
+    std::cout << "[SERVER] Valhalla Server Started on Port 5000" << std::endl;
 
     while (true) {
-        // Use the function name your compiler expects with the correct argument types
-        sf::Socket::Status status = socket.receive(
-            data.data(),
-            data.size(),
-            received,
-            sender, // Passed as the required std::optional<IpAddress>&
-            port
-        );
+        while (net.receive(recvBuf, size, senderIp, senderPort) == sf::Socket::Status::Done) {
+            if (size >= sizeof(ClientInput)) {
+                ClientInput input;
+                std::memcpy(&input, recvBuf.data(), sizeof(ClientInput));
 
-        if (status == sf::Socket::Status::Done) {
-            
-            // 3.0.2 check: The address is inside the optional
-            if (sender.has_value()) {
-                 std::string receivedString(data.data(), received);
-                 
-                 std::cout << "\nSERVER RECEIVED data from " << sender.value().toString() << " on port " << port << std::endl;
-                 std::cout << "Message: \"" << receivedString << "\"" << std::endl;
+                if (playerMap.find(senderPort) == playerMap.end()) {
+                    std::cout << "[NEW PLAYER] Port: " << senderPort << " from IP: " << senderIp->toString() << std::endl;
+                    playerMap[senderPort] = {400.0f, 300.0f, 100, senderIp.value()};
+                }
 
-                 // Send ACK back using sender.value() to get the IpAddress object
-                 std::string ack = "ACK: Received " + std::to_string(received) + " bytes.";
-                 socket.send(ack.c_str(), ack.size() + 1, sender.value(), port); 
-            } else {
-                 std::cout << "SERVER RECEIVED data, but sender address was empty." << std::endl;
+                float speed = 5.0f;
+                if (input.moveUp)    playerMap[senderPort].y -= speed;
+                if (input.moveDown)  playerMap[senderPort].y += speed;
+                if (input.moveLeft)  playerMap[senderPort].x -= speed;
+                if (input.moveRight) playerMap[senderPort].x += speed;
             }
-            break; 
         }
-        sf::sleep(sf::milliseconds(1));
-    }
 
+        // Збірка стану світу
+        GameState worldState = {0};
+        uint32_t count = 0;
+        for (auto const& [port, data] : playerMap) {
+            if (count < MAX_PLAYERS) {
+                worldState.players[count] = { (uint32_t)port, data.x, data.y, data.hp };
+                count++;
+            }
+        }
+        worldState.playerCount = count;
+
+        // Розсилка та логування (тільки якщо є гравці)
+        if (count > 0) {
+            NetworkDataBuffer sendBuf;
+            std::memcpy(sendBuf.data(), &worldState, sizeof(GameState));
+            for (auto const& [port, data] : playerMap) {
+                net.send(sendBuf, sizeof(GameState), data.ip, port);
+            }
+            // Розкоментуй наступний рядок для дуже детального дебагу:
+            // std::cout << "[BROADCAST] Sent state with " << count << " players." << std::endl;
+        }
+
+        sf::sleep(sf::milliseconds(16));
+    }
     return 0;
 }

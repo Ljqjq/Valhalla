@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/data/projects/palitex/OS/lab9/src/Network/NetworkManager.cpp" "CMakeFiles/ManagedServer.dir/src/Network/NetworkManager.cpp.o" "gcc" "CMakeFiles/ManagedServer.dir/src/Network/NetworkManager.cpp.o.d"
-  "/mnt/data/projects/palitex/OS/lab9/src/server_main.cpp" "CMakeFiles/ManagedServer.dir/src/server_main.cpp.o" "gcc" "CMakeFiles/ManagedServer.dir/src/server_main.cpp.o.d"
+  "/mnt/data/projects/job/C++/Valhalla/src/Network/NetworkManager.cpp" "CMakeFiles/ManagedServer.dir/src/Network/NetworkManager.cpp.o" "gcc" "CMakeFiles/ManagedServer.dir/src/Network/NetworkManager.cpp.o.d"
+  "/mnt/data/projects/job/C++/Valhalla/src/server_main.cpp" "CMakeFiles/ManagedServer.dir/src/server_main.cpp.o" "gcc" "CMakeFiles/ManagedServer.dir/src/server_main.cpp.o.d"
   "" "ManagedServer" "gcc" "CMakeFiles/ManagedServer.dir/link.d"
   )
 

@@ -1,1 +1,0 @@
-/usr/sbin/c++ -Wl,--dependency-file=CMakeFiles/RawClient.dir/link.d CMakeFiles/RawClient.dir/src/client_main.cpp.o CMakeFiles/RawClient.dir/src/Render/GameRenderer.cpp.o -o RawClient  /usr/lib/libsfml-network.so.3.0.2 /usr/lib/libsfml-graphics.so.3.0.2 /usr/lib/libsfml-window.so.3.0.2 /usr/lib/libsfml-system.so.3.0.2

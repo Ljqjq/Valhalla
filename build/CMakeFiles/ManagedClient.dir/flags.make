@@ -4,7 +4,7 @@
 # compile CXX with /usr/sbin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/mnt/data/projects/palitex/OS/lab9/include
+CXX_INCLUDES = -I/mnt/data/projects/job/C++/Valhalla/include -I/mnt/data/projects/job/C++/Valhalla/shared
 
-CXX_FLAGS = -std=gnu++17
+CXX_FLAGS = -std=gnu++20
 

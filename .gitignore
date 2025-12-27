@@ -1,0 +1,30 @@
+# --- Build Output ---
+/build/
+/bin/
+/obj/
+*.o
+*.a
+*.so
+*.dll
+*.exe
+*.out
+
+# --- IDEs and Editors ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*.user
+*.suo
+*.sln
+*.vcxproj
+*.filters
+
+# --- OS Specific ---
+.DS_Store
+Thumbs.db
+
+# --- Assets (Optional) ---
+# If your assets folder gets very large, some prefer to ignore it 
+# and use a downloader script, but usually for small labs keep it:
+# !assets/

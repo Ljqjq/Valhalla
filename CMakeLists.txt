@@ -1,37 +1,30 @@
 cmake_minimum_required(VERSION 3.10)
-project(ManagedSocketTest CXX)
+project(Valhalla)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# 1. Find SFML (3.0.2)
-find_package(SFML 3.0 COMPONENTS System Network REQUIRED)
+# Find SFML 3
+find_package(SFML 3 REQUIRED COMPONENTS Graphics Network Window System)
 
-# 2. Define Include Directory for NetworkManager.hpp
-# This allows CPP files to use #include "NetworkManager.hpp"
-include_directories(include)
+# Define where headers are
+include_directories(include shared)
 
-# 3. Define the NetworkManager source path
-# NOTE: The implementation is now inside the src/Network folder
-set(NETWORK_MANAGER_SRC src/Network/NetworkManager.cpp)
-
-# 4. Define the two executables, linking the manager source to both
-add_executable(ManagedServer 
+# --- SERVER ---
+# Explicitly listing sources to avoid confusion
+set(SERVER_SOURCES 
     src/server_main.cpp 
-    ${NETWORK_MANAGER_SRC}
+    src/Network/NetworkManager.cpp
 )
-add_executable(ManagedClient 
+
+add_executable(ManagedServer ${SERVER_SOURCES})
+target_link_libraries(ManagedServer SFML::Network SFML::System)
+
+# --- CLIENT ---
+set(CLIENT_SOURCES 
     src/client_main.cpp 
-    ${NETWORK_MANAGER_SRC}
+    src/Network/NetworkManager.cpp
 )
 
-# 5. Link both to the required SFML components
-target_link_libraries(ManagedServer PRIVATE 
-    SFML::System 
-    SFML::Network
-)
-
-target_link_libraries(ManagedClient PRIVATE 
-    SFML::System 
-    SFML::Network
-)
+add_executable(ManagedClient ${CLIENT_SOURCES})
+target_link_libraries(ManagedClient SFML::Graphics SFML::Network SFML::Window SFML::System)

@@ -57,10 +57,10 @@ RM = /usr/sbin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/data/projects/palitex/OS/lab9
+CMAKE_SOURCE_DIR = /mnt/data/projects/job/C++/Valhalla
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/data/projects/palitex/OS/lab9/build
+CMAKE_BINARY_DIR = /mnt/data/projects/job/C++/Valhalla/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/data/projects/palitex/OS/lab9/build/CMakeFiles /mnt/data/projects/palitex/OS/lab9/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/data/projects/job/C++/Valhalla/build/CMakeFiles /mnt/data/projects/job/C++/Valhalla/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/data/projects/palitex/OS/lab9/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/data/projects/job/C++/Valhalla/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -169,30 +169,6 @@ src/Network/NetworkManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ManagedClient.dir/build.make CMakeFiles/ManagedClient.dir/src/Network/NetworkManager.cpp.s
 .PHONY : src/Network/NetworkManager.cpp.s
 
-src/Render/GameRenderer.o: src/Render/GameRenderer.cpp.o
-.PHONY : src/Render/GameRenderer.o
-
-# target to build an object file
-src/Render/GameRenderer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ManagedClient.dir/build.make CMakeFiles/ManagedClient.dir/src/Render/GameRenderer.cpp.o
-.PHONY : src/Render/GameRenderer.cpp.o
-
-src/Render/GameRenderer.i: src/Render/GameRenderer.cpp.i
-.PHONY : src/Render/GameRenderer.i
-
-# target to preprocess a source file
-src/Render/GameRenderer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ManagedClient.dir/build.make CMakeFiles/ManagedClient.dir/src/Render/GameRenderer.cpp.i
-.PHONY : src/Render/GameRenderer.cpp.i
-
-src/Render/GameRenderer.s: src/Render/GameRenderer.cpp.s
-.PHONY : src/Render/GameRenderer.s
-
-# target to generate assembly for a file
-src/Render/GameRenderer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ManagedClient.dir/build.make CMakeFiles/ManagedClient.dir/src/Render/GameRenderer.cpp.s
-.PHONY : src/Render/GameRenderer.cpp.s
-
 src/client_main.o: src/client_main.cpp.o
 .PHONY : src/client_main.o
 
@@ -254,9 +230,6 @@ help:
 	@echo "... src/Network/NetworkManager.o"
 	@echo "... src/Network/NetworkManager.i"
 	@echo "... src/Network/NetworkManager.s"
-	@echo "... src/Render/GameRenderer.o"
-	@echo "... src/Render/GameRenderer.i"
-	@echo "... src/Render/GameRenderer.s"
 	@echo "... src/client_main.o"
 	@echo "... src/client_main.i"
 	@echo "... src/client_main.s"

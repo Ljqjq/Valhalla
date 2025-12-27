@@ -1,43 +1,67 @@
-// src/client_main.cpp - Final UDP Sender (SFML 3.0.2 Compatible)
-#include <SFML/Network.hpp>
+#include <SFML/Graphics.hpp>
 #include <iostream>
-#include <array>
-#include <string>
-#include <optional> // REQUIRED for std::optional<sf::IpAddress>
-
-constexpr unsigned short SERVER_PORT = 45678;
-constexpr std::size_t ACK_BUFFER_SIZE = 100;
+#include <cstring>
+#include <optional>
+#include "../include/NetworkManager.hpp"
+#include "../shared/Protocol.hpp"
 
 int main() {
-    sf::UdpSocket socket;
-    
-    std::string message = "SFML 3.0.2 Client Test Message.";
-    sf::IpAddress receiverAddress = sf::IpAddress::LocalHost; // Use LocalHost instead of string literal for 3.x safety
+    // ДРУКУЄМО РОЗМІРИ ДЛЯ ПЕРЕВІРКИ
+    std::cout << "Expected GameState size: " << sizeof(GameState) << " bytes" << std::endl;
 
-    // Sending logic remains simple
-    socket.send(message.c_str(), message.size() + 1, receiverAddress, SERVER_PORT);
-    std::cout << "CLIENT: Successfully sent message." << std::endl;
+    sf::RenderWindow window(sf::VideoMode({800, 600}), "Valhalla - Debug");
+    window.setFramerateLimit(60);
 
-    // --- Wait for Acknowledgment (ACK) ---
-    std::array<char, ACK_BUFFER_SIZE> ackBuffer; 
-    std::size_t ackReceived = 0;
-    
-    // Declarations required by the SFML 3.0.2 receive function:
-    std::optional<sf::IpAddress> ackSender; // NOTE: std::optional is REQUIRED here
-    unsigned short ackPort = 0;
+    NetworkManager net;
+    net.bind(0);
 
-    socket.setBlocking(true);
-    
-    
-    // Use the function name your compiler expects with the correct argument types
-    if (socket.receive(ackBuffer.data(), ackBuffer.size(), ackReceived, ackSender, ackPort) == sf::Socket::Status::Done) {
-        if (ackSender.has_value()) {
-            std::string ackString(ackBuffer.data(), ackReceived);
-            std::cout << "CLIENT ACK: " << ackString << std::endl;
+    sf::IpAddress serverIp = sf::IpAddress::resolve("127.0.0.1").value();
+    unsigned short serverPort = 5000;
+
+    sf::CircleShape ball(20.f);
+    ball.setOrigin({20.f, 20.f});
+    GameState currentWorld = {0};
+
+    while (window.isOpen()) {
+        while (const std::optional event = window.pollEvent()) {
+            if (event->is<sf::Event::Closed>()) window.close();
         }
-    } else {
-        std::cout << "CLIENT: Did not receive acknowledgment within timeout." << std::endl;
-    }
 
+        // 1. Send Input
+        ClientInput input = {0};
+        input.moveUp = sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W);
+        input.moveDown = sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S);
+        input.moveLeft = sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A);
+        input.moveRight = sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D);
+
+        NetworkDataBuffer sendBuf;
+        std::memcpy(sendBuf.data(), &input, sizeof(ClientInput));
+        net.send(sendBuf, sizeof(ClientInput), serverIp, serverPort);
+
+        // 2. Receive World State
+        NetworkDataBuffer recvBuf;
+        std::size_t receivedSize;
+        std::optional<sf::IpAddress> ip;
+        unsigned short port;
+        
+        while (net.receive(recvBuf, receivedSize, ip, port) == sf::Socket::Status::Done) {
+            if (receivedSize == sizeof(GameState)) {
+                std::memcpy(&currentWorld, recvBuf.data(), sizeof(GameState));
+            } else {
+                // ЦЕЙ ЛОГ ПІДКАЖЕ НАМ ПРАВДУ:
+                std::cerr << "[NET DEBUG] Size mismatch! Got: " << receivedSize 
+                          << " Expected: " << sizeof(GameState) << std::endl;
+            }
+        }
+
+        // 3. Render
+        window.clear(sf::Color(30, 30, 35));
+        for (uint32_t i = 0; i < currentWorld.playerCount; i++) {
+            ball.setPosition({currentWorld.players[i].x, currentWorld.players[i].y});
+            ball.setFillColor(sf::Color::Cyan);
+            window.draw(ball);
+        }
+        window.display();
+    }
     return 0;
 }

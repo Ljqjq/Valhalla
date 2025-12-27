@@ -2,8 +2,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/ManagedClient.dir/link.d"
   "CMakeFiles/ManagedClient.dir/src/Network/NetworkManager.cpp.o"
   "CMakeFiles/ManagedClient.dir/src/Network/NetworkManager.cpp.o.d"
-  "CMakeFiles/ManagedClient.dir/src/Render/GameRenderer.cpp.o"
-  "CMakeFiles/ManagedClient.dir/src/Render/GameRenderer.cpp.o.d"
   "CMakeFiles/ManagedClient.dir/src/client_main.cpp.o"
   "CMakeFiles/ManagedClient.dir/src/client_main.cpp.o.d"
   "ManagedClient"
