@@ -1,0 +1,4 @@
+/mnt/data/projects/job/C++/Valhalla/build-win/CMakeFiles/ManagedServer.dir
+/mnt/data/projects/job/C++/Valhalla/build-win/CMakeFiles/ManagedClient.dir
+/mnt/data/projects/job/C++/Valhalla/build-win/CMakeFiles/edit_cache.dir
+/mnt/data/projects/job/C++/Valhalla/build-win/CMakeFiles/rebuild_cache.dir
