@@ -40,10 +40,16 @@ int main() {
 
         // 1. Відправка інпуту
         ClientInput input = {0};
-        input.moveUp    = sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W);
-        input.moveDown  = sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S);
-        input.moveLeft  = sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A);
-        input.moveRight = sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D);
+        if(window.hasFocus()) {
+          input.moveUp    = sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W);      
+          input.moveDown  = sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S);
+          input.moveLeft  = sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A);
+          input.moveRight = sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D);
+
+        }
+        else {
+           input = {0, 0, 0, 0, 0};  
+        }        
 
         NetworkDataBuffer sendBuf;
         std::memcpy(sendBuf.data(), &input, sizeof(ClientInput));

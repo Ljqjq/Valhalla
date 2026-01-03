@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 #include <map>
 #include <cstring>
 #include <optional>
@@ -62,7 +63,42 @@ int main() {
             }
         }
         worldState.playerCount = count;
-
+        
+        // 2. Collision Detection (Simple Physics)
+        float radius = 20.0f;
+        float minDistance = radius * 2.0f; // 40.0f
+        
+        for (auto it1 = playerMap.begin(); it1 != playerMap.end(); ++it1) {
+            for (auto it2 = std::next(it1); it2 != playerMap.end(); ++it2) {
+                ServerPlayerData& p1 = it1->second;
+                ServerPlayerData& p2 = it2->second;
+        
+                // Calculate distance between centers
+                float dx = p2.x - p1.x;
+                float dy = p2.y - p1.y;
+                float distance = std::sqrt(dx * dx + dy * dy);
+       
+                if (distance < minDistance) {
+                    // Collision detected! 
+                    // Resolve: Push them away from each other
+                    float overlap = minDistance - distance;
+                    
+                    // Direction vector
+                    float nx = dx / distance;
+                    float ny = dy / distance;
+        
+                    // Move both balls back by half the overlap
+                    p1.x -= nx * (overlap / 2.0f);
+                    p1.y -= ny * (overlap / 2.0f);
+                    p2.x += nx * (overlap / 2.0f);
+                    p2.y += ny * (overlap / 2.0f);
+                    
+                    // Optional: Reduce HP on collision
+                    // p1.hp -= 1; 
+                    // p2.hp -= 1;
+                }
+            }
+        }
         // Розсилка та логування (тільки якщо є гравці)
         if (count > 0) {
             NetworkDataBuffer sendBuf;
