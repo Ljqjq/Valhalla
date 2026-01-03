@@ -412,12 +412,22 @@ CMakeFiles/ManagedServer.dir/src/server_main.cpp.o: /mnt/data/projects/job/C++/V
   /usr/include/bits/errno.h \
   /usr/include/bits/floatn-common.h \
   /usr/include/bits/floatn.h \
+  /usr/include/bits/flt-eval-method.h \
+  /usr/include/bits/fp-fast.h \
+  /usr/include/bits/fp-logb.h \
   /usr/include/bits/getopt_core.h \
   /usr/include/bits/getopt_posix.h \
+  /usr/include/bits/iscanonical.h \
   /usr/include/bits/libc-header-start.h \
+  /usr/include/bits/libm-simd-decl-stubs.h \
   /usr/include/bits/local_lim.h \
   /usr/include/bits/locale.h \
   /usr/include/bits/long-double.h \
+  /usr/include/bits/math-vector.h \
+  /usr/include/bits/mathcalls-helper-functions.h \
+  /usr/include/bits/mathcalls-macros.h \
+  /usr/include/bits/mathcalls-narrow.h \
+  /usr/include/bits/mathcalls.h \
   /usr/include/bits/posix1_lim.h \
   /usr/include/bits/posix2_lim.h \
   /usr/include/bits/posix_opt.h \
@@ -552,6 +562,7 @@ CMakeFiles/ManagedServer.dir/src/server_main.cpp.o: /mnt/data/projects/job/C++/V
   /usr/include/c++/15.2.1/bits/shared_ptr.h \
   /usr/include/c++/15.2.1/bits/shared_ptr_atomic.h \
   /usr/include/c++/15.2.1/bits/shared_ptr_base.h \
+  /usr/include/c++/15.2.1/bits/specfun.h \
   /usr/include/c++/15.2.1/bits/sstream.tcc \
   /usr/include/c++/15.2.1/bits/std_abs.h \
   /usr/include/c++/15.2.1/bits/std_mutex.h \
@@ -593,6 +604,7 @@ CMakeFiles/ManagedServer.dir/src/server_main.cpp.o: /mnt/data/projects/job/C++/V
   /usr/include/c++/15.2.1/chrono \
   /usr/include/c++/15.2.1/climits \
   /usr/include/c++/15.2.1/clocale \
+  /usr/include/c++/15.2.1/cmath \
   /usr/include/c++/15.2.1/codecvt \
   /usr/include/c++/15.2.1/compare \
   /usr/include/c++/15.2.1/concepts \
@@ -642,6 +654,18 @@ CMakeFiles/ManagedServer.dir/src/server_main.cpp.o: /mnt/data/projects/job/C++/V
   /usr/include/c++/15.2.1/string \
   /usr/include/c++/15.2.1/string_view \
   /usr/include/c++/15.2.1/system_error \
+  /usr/include/c++/15.2.1/tr1/bessel_function.tcc \
+  /usr/include/c++/15.2.1/tr1/beta_function.tcc \
+  /usr/include/c++/15.2.1/tr1/ell_integral.tcc \
+  /usr/include/c++/15.2.1/tr1/exp_integral.tcc \
+  /usr/include/c++/15.2.1/tr1/gamma.tcc \
+  /usr/include/c++/15.2.1/tr1/hypergeometric.tcc \
+  /usr/include/c++/15.2.1/tr1/legendre_function.tcc \
+  /usr/include/c++/15.2.1/tr1/modified_bessel_func.tcc \
+  /usr/include/c++/15.2.1/tr1/poly_hermite.tcc \
+  /usr/include/c++/15.2.1/tr1/poly_laguerre.tcc \
+  /usr/include/c++/15.2.1/tr1/riemann_zeta.tcc \
+  /usr/include/c++/15.2.1/tr1/special_function_util.h \
   /usr/include/c++/15.2.1/tuple \
   /usr/include/c++/15.2.1/type_traits \
   /usr/include/c++/15.2.1/typeinfo \
@@ -676,6 +700,7 @@ CMakeFiles/ManagedServer.dir/src/server_main.cpp.o: /mnt/data/projects/job/C++/V
   /usr/include/linux/stddef.h \
   /usr/include/linux/types.h \
   /usr/include/locale.h \
+  /usr/include/math.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
@@ -750,6 +775,30 @@ CMakeFiles/ManagedServer.dir/src/server_main.cpp.o:
 
 /usr/lib/Scrt1.o:
 
+/usr/include/c++/15.2.1/tr1/special_function_util.h:
+
+/usr/include/c++/15.2.1/tr1/modified_bessel_func.tcc:
+
+/usr/include/c++/15.2.1/tr1/legendre_function.tcc:
+
+/usr/include/c++/15.2.1/tr1/hypergeometric.tcc:
+
+/usr/include/c++/15.2.1/tr1/gamma.tcc:
+
+/usr/include/c++/15.2.1/tr1/exp_integral.tcc:
+
+/usr/include/bits/mathcalls-narrow.h:
+
+/usr/include/bits/mathcalls-macros.h:
+
+/usr/include/bits/libm-simd-decl-stubs.h:
+
+/usr/include/bits/iscanonical.h:
+
+/usr/include/bits/fp-logb.h:
+
+/usr/include/bits/flt-eval-method.h:
+
 /mnt/data/projects/job/C++/Valhalla/shared/Protocol.hpp:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/syslimits.h:
@@ -768,11 +817,15 @@ CMakeFiles/ManagedServer.dir/src/server_main.cpp.o:
 
 /usr/include/sys/cdefs.h:
 
+/usr/include/c++/15.2.1/tr1/poly_laguerre.tcc:
+
 /usr/include/strings.h:
 
 /usr/include/string.h:
 
 /usr/include/stdlib.h:
+
+/usr/include/bits/fp-fast.h:
 
 /usr/include/wctype.h:
 
@@ -797,6 +850,8 @@ CMakeFiles/ManagedServer.dir/src/Network/NetworkManager.cpp.o:
 /usr/include/gnu/stubs.h:
 
 /usr/include/gnu/stubs-64.h:
+
+/usr/include/c++/15.2.1/cmath:
 
 /usr/include/stdint.h:
 
@@ -848,6 +903,8 @@ CMakeFiles/ManagedServer.dir/src/Network/NetworkManager.cpp.o:
 
 /usr/include/c++/15.2.1/istream:
 
+/usr/include/bits/mathcalls.h:
+
 /usr/include/c++/15.2.1/iostream:
 
 /usr/include/c++/15.2.1/format:
@@ -865,6 +922,8 @@ CMakeFiles/ManagedServer.dir/src/Network/NetworkManager.cpp.o:
 /usr/include/bits/wctype-wchar.h:
 
 /usr/include/bits/timesize.h:
+
+/usr/include/bits/math-vector.h:
 
 /usr/include/c++/15.2.1/bits/exception.h:
 
@@ -932,6 +991,8 @@ CMakeFiles/ManagedServer.dir/src/Network/NetworkManager.cpp.o:
 
 /usr/lib/libc.so:
 
+/usr/include/c++/15.2.1/tr1/beta_function.tcc:
+
 /usr/include/bits/pthreadtypes.h:
 
 /usr/include/bits/pthread_stack_min-dynamic.h:
@@ -947,6 +1008,8 @@ CMakeFiles/ManagedServer.dir/src/Network/NetworkManager.cpp.o:
 /usr/include/SFML/System/Vector2.inl:
 
 /usr/include/bits/long-double.h:
+
+/usr/include/c++/15.2.1/tr1/riemann_zeta.tcc:
 
 /usr/include/bits/types/__fpos_t.h:
 
@@ -1001,6 +1064,8 @@ CMakeFiles/ManagedServer.dir/src/Network/NetworkManager.cpp.o:
 /usr/include/asm/types.h:
 
 /usr/include/SFML/System/Clock.hpp:
+
+/usr/include/c++/15.2.1/bits/specfun.h:
 
 /usr/include/SFML/System/Utf.hpp:
 
@@ -1066,6 +1131,8 @@ CMakeFiles/ManagedServer.dir/src/Network/NetworkManager.cpp.o:
 
 /usr/include/SFML/System/Angle.inl:
 
+/usr/include/c++/15.2.1/tr1/bessel_function.tcc:
+
 /usr/include/SFML/Network/Ftp.hpp:
 
 /usr/include/bits/waitstatus.h:
@@ -1086,6 +1153,8 @@ CMakeFiles/ManagedServer.dir/src/Network/NetworkManager.cpp.o:
 
 /mnt/data/projects/job/C++/Valhalla/include/NetworkManager.hpp:
 
+/usr/include/c++/15.2.1/tr1/ell_integral.tcc:
+
 /usr/include/bits/xopen_lim.h:
 
 /usr/include/c++/15.2.1/bits/postypes.h:
@@ -1099,6 +1168,8 @@ CMakeFiles/ManagedServer.dir/src/Network/NetworkManager.cpp.o:
 /usr/include/c++/15.2.1/iterator:
 
 /usr/include/asm-generic/errno-base.h:
+
+/usr/include/c++/15.2.1/tr1/poly_hermite.tcc:
 
 /usr/include/SFML/Network/Packet.hpp:
 
@@ -1220,6 +1291,8 @@ CMakeFiles/ManagedServer.dir/src/Network/NetworkManager.cpp.o:
 
 /usr/include/bits/endian.h:
 
+/usr/include/math.h:
+
 /usr/include/SFML/Network/SocketHandle.hpp:
 
 /usr/include/c++/15.2.1/bits/invoke.h:
@@ -1275,6 +1348,8 @@ CMakeFiles/ManagedServer.dir/src/Network/NetworkManager.cpp.o:
 /usr/include/c++/15.2.1/cerrno:
 
 /usr/include/c++/15.2.1/bits/char_traits.h:
+
+/usr/include/bits/mathcalls-helper-functions.h:
 
 /usr/include/c++/15.2.1/bits/charconv.h:
 

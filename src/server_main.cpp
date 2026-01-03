@@ -10,6 +10,9 @@
 struct ServerPlayerData {
     float x = 400.0f;
     float y = 300.0f;
+    float vx = 0.0f;
+    float vy = 0.0f;
+
     int32_t hp = 100;
     sf::IpAddress ip = sf::IpAddress::LocalHost;
 };
@@ -42,14 +45,27 @@ int main() {
 
                 if (playerMap.find(senderPort) == playerMap.end()) {
                     std::cout << "[NEW PLAYER] Port: " << senderPort << " from IP: " << senderIp->toString() << std::endl;
-                    playerMap[senderPort] = {400.0f, 300.0f, 100, senderIp.value()};
+                    playerMap[senderPort] = {400.0f, 300.0f, 0.0f, 0.0f, 100, senderIp.value()};
                 }
 
-                float speed = 5.0f;
-                if (input.moveUp)    playerMap[senderPort].y -= speed;
-                if (input.moveDown)  playerMap[senderPort].y += speed;
-                if (input.moveLeft)  playerMap[senderPort].x -= speed;
-                if (input.moveRight) playerMap[senderPort].x += speed;
+                float acceleration = 1.0f;
+                float friction = 0.9f;
+
+                if (input.moveUp && playerMap[senderPort].vy > -5.0f)    playerMap[senderPort].vy -= acceleration;
+                if (input.moveDown && playerMap[senderPort].vy < 5.0f)  playerMap[senderPort].vy += acceleration;
+                if (input.moveLeft && playerMap[senderPort].vx > -5.0f)  playerMap[senderPort].vx -= acceleration;
+                if (input.moveRight && playerMap[senderPort].vx < 5.0f) playerMap[senderPort].vx += acceleration;
+
+                playerMap[senderPort].vy *= friction;
+                playerMap[senderPort].vx *= friction;
+
+                playerMap[senderPort].x += playerMap[senderPort].vx;
+                playerMap[senderPort].y += playerMap[senderPort].vy;
+
+                if (playerMap[senderPort].x < 20)  { playerMap[senderPort].x = 20;  playerMap[senderPort].vx *= -0.5f; }
+                if (playerMap[senderPort].x > 780) { playerMap[senderPort].x = 780; playerMap[senderPort].vx *= -0.5f; }
+                if (playerMap[senderPort].y < 20)  { playerMap[senderPort].y = 20;  playerMap[senderPort].vy *= -0.5f; }
+                if (playerMap[senderPort].y > 580) { playerMap[senderPort].y = 580; playerMap[senderPort].vy *= -0.5f; }
             }
         }
 
@@ -79,23 +95,18 @@ int main() {
                 float distance = std::sqrt(dx * dx + dy * dy);
        
                 if (distance < minDistance) {
-                    // Collision detected! 
-                    // Resolve: Push them away from each other
-                    float overlap = minDistance - distance;
-                    
-                    // Direction vector
-                    float nx = dx / distance;
-                    float ny = dy / distance;
-        
-                    // Move both balls back by half the overlap
-                    p1.x -= nx * (overlap / 2.0f);
-                    p1.y -= ny * (overlap / 2.0f);
-                    p2.x += nx * (overlap / 2.0f);
-                    p2.y += ny * (overlap / 2.0f);
-                    
-                    // Optional: Reduce HP on collision
-                    // p1.hp -= 1; 
-                    // p2.hp -= 1;
+                      float overlap = minDistance - distance;
+                      float nx = dx / distance; // Нормаль зіткнення
+                      float ny = dy / distance;
+
+
+                      // ВІДСКІК: обмін швидкостями (спрощено)
+                      std::swap(p1.vx, p2.vx);
+                      std::swap(p1.vy, p2.vy);
+                      
+                      // Додаємо трохи імпульсу від удару
+                      p1.vx -= nx * 2.0f; p1.vy -= ny * 2.0f;
+                      p2.vx += nx * 2.0f; p2.vy += ny * 2.0f;
                 }
             }
         }
