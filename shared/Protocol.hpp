@@ -1,27 +1,23 @@
-#ifndef PROTOCOL_HPP
-#define PROTOCOL_HPP
-
+#pragma once
 #include <cstdint>
 
-// 4 (count) + 6 * 16 (players) = 100 bytes
-#define MAX_PLAYERS 6 
-
-#pragma pack(push, 1)
+#pragma pack(push, 1) // Це гарантує, що розмір буде однаковим всюди
 struct PlayerInfo {
-    uint32_t id;   // 4 bytes
-    float x;       // 4 bytes
-    float y;       // 4 bytes
-    int32_t hp;    // 4 bytes
+    uint32_t id;          // 4 байти
+    float x, y;           // 8 байтів
+    int32_t hp;           // 4 байти
+    uint8_t isSpaceActive;// 1 байт
+    uint8_t padding[3];   // 3 байти для вирівнювання до 20 байтів на гравця
 };
 
 struct GameState {
-    uint32_t playerCount;              // 4 bytes
-    PlayerInfo players[MAX_PLAYERS];    // 96 bytes
-};
-
-struct ClientInput {
-    uint8_t moveUp, moveDown, moveLeft, moveRight, pressSpace;
-};
+    uint32_t playerCount;      // 4 байти
+    PlayerInfo players[6];     // 6 гравців * 20 байтів = 120 байтів
+}; // Разом: 124 байти
 #pragma pack(pop)
 
-#endif
+struct ClientInput {
+    uint8_t moveUp, moveDown, moveLeft, moveRight;
+    uint8_t pressSpace; 
+    uint8_t pressShift;
+};

@@ -7,7 +7,7 @@
 #include <optional>
 
 // Define a common buffer size for sending/receiving
-constexpr std::size_t DEFAULT_BUFFER_SIZE = 100;
+constexpr std::size_t DEFAULT_BUFFER_SIZE = 256;
 using NetworkDataBuffer = std::array<char, DEFAULT_BUFFER_SIZE>;
 
 class NetworkManager {

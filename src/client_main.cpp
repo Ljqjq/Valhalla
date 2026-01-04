@@ -45,10 +45,11 @@ int main() {
           input.moveDown  = sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S);
           input.moveLeft  = sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A);
           input.moveRight = sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D);
-
+          input.pressSpace = sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Space);
+          input.pressShift = sf::Keyboard::isKeyPressed(sf::Keyboard::Key::LShift); 
         }
         else {
-           input = {0, 0, 0, 0, 0};  
+           input = {0, 0, 0, 0, 0, 0};  
         }        
 
         NetworkDataBuffer sendBuf;
@@ -62,9 +63,21 @@ int main() {
         unsigned short senderPort;
         
         while (net.receive(recvBuf, size, senderIp, senderPort) == sf::Socket::Status::Done) {
-            if (size == sizeof(GameState)) {
-                std::memcpy(&currentWorld, recvBuf.data(), sizeof(GameState));
-            }
+            if (size >= sizeof(GameState)) {
+               std::memcpy(&currentWorld, recvBuf.data(), sizeof(GameState));
+
+               // ЛОГУВАННЯ НА КЛІЄНТІ
+               if (currentWorld.playerCount > 0) {
+                   std::cout << "[CLIENT] Received GameState | Packet Size: " << size 
+                             << " | Expected Size: " << sizeof(GameState)
+                             << " | P0 ID: " << currentWorld.players[0].id
+                             << " | P0 Pos: " << currentWorld.players[0].x << ", " << currentWorld.players[0].y 
+                             << " | Space: " << (int)currentWorld.players[0].isSpaceActive << std::endl;
+               }
+           } else {
+               std::cout << "[CLIENT] Warning: Packet too small! Received: " << size 
+                         << " Expected: " << sizeof(GameState) << std::endl;
+           }
         }
 
         // 3. Малювання
